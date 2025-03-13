@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Alarm</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Login Screen -->
+    <img
+      class="background-polygons"
+      src="images/Background.svg"
+      alt="Background Image"
+    />
+    <div id="login-screen" class="screen active">
+      <div class="login-screen-flex">
+        <div class="daily-alarm-logo-main-container">
+          <img
+            class="daily-alarm-logo-main"
+            src="images/DailyAlarmLogo.svg"
+            alt="Daily Alarm Logo"
+          />
+        </div>
+        <div class="login-container">
+          <h1>Daily Alarm</h1>
+          <div class="login-form">
+            <input
+              type="email"
+              id="email"
+              placeholder="Correo"
+              value="nicolas.calero@gmail.com"
+            />
+            <input type="password" id="password" placeholder="Contraseña" />
+            <button id="login-btn">Iniciar Sesion</button>
+            <p class="forgot-password">Olvidé mi contraseña</p>
+            <p class="register-note">Puedes registrarte por medio de la app</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard-screen" class="screen">
+      <header>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="teams-container">
+        <div class="team-card">
+          <div class="team-header">
+            <h3>Equipo UX</h3>
+            <span class="status complete">Completo</span>
+          </div>
+          <div class="team-details">
+            <p>Hora Daily: 11:00AM</p>
+            <p>Hora Alarma: 10:45AM</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-header">
+            <h3>Trabajo DAN</h3>
+            <span class="status incomplete">Falta</span>
+          </div>
+          <div class="team-details">
+            <p>Hora Daily: 11:00AM</p>
+            <p>Hora Alarma: 10:45AM</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-header">
+            <h3>Empresarial</h3>
+            <span class="status incomplete">Falta</span>
+          </div>
+          <div class="team-details">
+            <p>Hora Daily: 11:00AM</p>
+            <p>Hora Alarma: 10:45AM</p>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-header">
+            <h3>Trabajo Equipo</h3>
+            <span class="status complete">Completo</span>
+          </div>
+          <div class="team-details">
+            <p>Hora Daily: 11:00AM</p>
+            <p>Hora Alarma: 10:45AM</p>
+          </div>
+        </div>
+
+        <div class="add-team-card">
+          <i class="fas fa-plus"></i>
+          <p>Crear Equipo</p>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item active" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Team Details Screen -->
+    <div id="team-details-screen" class="screen">
+      <header>
+        <div class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span>Volver</span>
+        </div>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="team-title">
+        <h2>Equipo UX</h2>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-target="advancements-tab">Avances</div>
+        <div class="tab" data-target="members-tab">Miembros</div>
+      </div>
+
+      <div id="advancements-tab" class="tab-content active">
+        <div class="advancements-list">
+          <div class="advancement-item">
+            <div class="user-info">
+              <img src="images/profile.jpg" alt="User" class="user-img" />
+              <span>Nicolas Calero</span>
+            </div>
+            <div class="advancement-content">
+              <span class="advancement-type">Reporte General</span>
+              <p class="advancement-text">
+                ¡Buenos días! El viernes pasado estuve trabajando en la...
+              </p>
+            </div>
+          </div>
+
+          <div class="advancement-item">
+            <div class="user-info">
+              <img src="images/man1.png" alt="User" class="user-img" />
+              <span>Esteban Ruiz</span>
+            </div>
+            <div class="advancement-content">
+              <span class="advancement-type">Reporte General</span>
+              <p class="advancement-text">
+                ¡Buenos días! El viernes pasado estuve trabajando en la...
+              </p>
+            </div>
+          </div>
+
+          <div class="advancement-item">
+            <div class="user-info">
+              <img src="images/woman2.png" alt="User" class="user-img" />
+              <span>Andrea Coronado</span>
+            </div>
+            <div class="advancement-content">
+              <span class="advancement-type">Reporte General</span>
+              <p class="advancement-text">
+                ¡Buenos días! El viernes pasado estuve trabajando en la...
+              </p>
+            </div>
+          </div>
+
+          <div class="advancement-item">
+            <div class="user-info">
+              <img src="images/women1.png" alt="User" class="user-img" />
+              <span>Margarita Rodriguez</span>
+            </div>
+            <div class="advancement-content">
+              <span class="advancement-type">Reporte General</span>
+              <p class="advancement-text">
+                ¡Buenos días! El viernes pasado estuve trabajando en la...
+              </p>
+            </div>
+          </div>
+
+          <div class="advancement-item">
+            <div class="user-info">
+              <img src="images/man2.png" alt="User" class="user-img" />
+              <span>Juan Garzon</span>
+            </div>
+            <div class="advancement-content">
+              <span class="advancement-type">Reporte General</span>
+              <p class="advancement-text">
+                ¡Buenos días! El viernes pasado estuve trabajando en la...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <button class="floating-button add-advancement-btn">+</button>
+      </div>
+
+      <div id="members-tab" class="tab-content">
+        <div class="team-join-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-text">Descarga la App Daily Alarm</div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-text">Selecciona la opcion "Agregar Equipo"</div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-text">Ingresa el codigo "JDFA-3843-JDFS"</div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item active" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Add Advancement Screen -->
+    <div id="add-advancement-screen" class="screen">
+      <header>
+        <div class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span>Volver</span>
+        </div>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="advancement-form">
+        <div class="form-section">
+          <textarea
+            placeholder="¿Qué hiciste ayer?"
+            class="advancement-textarea"
+          >
+¡Buenos días! El viernes pasado estuve trabajando en la arquitectura de la aplicación web</textarea
+          >
+          <span class="section-label">Reporte General</span>
+        </div>
+
+        <div class="form-section">
+          <textarea
+            placeholder="¿Qué hiciste ayer?"
+            class="advancement-textarea"
+          >
+Ayer trabajé en la implementación de la última funcionalidad que alistó Carlos, pero se tendrá que desechar.</textarea
+          >
+          <span class="section-label">¿Qué hiciste ayer?</span>
+        </div>
+
+        <div class="form-section">
+          <textarea placeholder="¿Qué harás hoy?" class="advancement-textarea">
+Hoy iniciaré la funcionalidad de iniciar sesión desde cero. Además, por la tarde tengo una capacitación.</textarea
+          >
+          <span class="section-label">¿Qué harás hoy?</span>
+        </div>
+
+        <div class="form-section">
+          <textarea
+            placeholder="¿Que bloqueos tienes?"
+            class="advancement-textarea"
+          ></textarea>
+          <span class="section-label">¿Que bloqueos tienes?</span>
+        </div>
+
+        <button class="submit-advancement-btn">Enviar</button>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item active" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Profile Screen -->
+    <div id="profile-screen" class="screen">
+      <header>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="profile-container">
+        <div class="profile-image-container">
+          <img
+            src="images/profile.jpg"
+            alt="Profile"
+            class="large-profile-img"
+          />
+          <button class="change-img-btn">Cambiar Imagen</button>
+        </div>
+
+        <div class="profile-info">
+          <div class="info-field">
+            <span class="field-label">Nombre Completo</span>
+            <span class="field-value">Nicolás Calero</span>
+          </div>
+
+          <div class="info-field">
+            <span class="field-label">Correo</span>
+            <span class="field-value">nicolas.calero@gmail.com</span>
+          </div>
+
+          <div class="info-field">
+            <span class="field-label">Ocupación</span>
+            <span class="field-value">Ingeniero Software</span>
+          </div>
+
+          <button class="logout-btn">Cerrar Sesion</button>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item active" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Create Team Screen -->
+    <div id="create-team-screen" class="screen">
+      <header>
+        <div class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span>Volver</span>
+        </div>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="create-team-form">
+        <div class="team-image-container">
+          <img src="images/cm3.png" alt="Team" class="team-img" />
+          <button class="change-img-btn">Cambiar Imagen</button>
+        </div>
+
+        <div class="team-form-fields">
+          <div class="form-field">
+            <label>Nombre Equipo</label>
+            <input type="text" placeholder="Nombre Equipo" value="Equipo UX" />
+          </div>
+
+          <div class="form-field">
+            <label>Hora Daily</label>
+            <input type="time" value="11:00" />
+          </div>
+
+          <div class="form-field">
+            <label>Hora Alarma</label>
+            <input type="time" value="10:45" />
+          </div>
+
+          <button class="create-team-btn">Crear Equipo</button>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item active" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <div id="advancement-detail-screen" class="screen">
+      <header>
+        <div class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span>Volver</span>
+        </div>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="advancement-detail-container">
+        <div class="advancement-author">
+          <img src="images/profile.jpg" alt="User" class="large-user-img" />
+          <div class="author-info">
+            <h3>Nicolas Calero</h3>
+            <span class="detail-date">13 Marzo, 2025 - 09:45 AM</span>
+          </div>
+        </div>
+
+        <div class="advancement-section">
+          <h4>Reporte General</h4>
+          <p>
+            ¡Buenos días! El viernes pasado estuve trabajando en la arquitectura
+            de la aplicación web. Logré completar el diseño de la base de datos
+            y establecer los endpoints principales que necesitaremos para la
+            primera versión.
+          </p>
+        </div>
+
+        <div class="advancement-section">
+          <h4>¿Qué hiciste ayer?</h4>
+          <p>
+            Ayer trabajé en la implementación de la última funcionalidad que
+            alistó Carlos, pero se tendrá que desechar. Después de revisar el
+            código con el equipo de QA, encontramos varios problemas de
+            rendimiento que necesitan ser resueltos desde la raíz.
+          </p>
+        </div>
+
+        <div class="advancement-section">
+          <h4>¿Qué harás hoy?</h4>
+          <p>
+            Hoy iniciaré la funcionalidad de iniciar sesión desde cero. Además,
+            por la tarde tengo una capacitación sobre las nuevas herramientas de
+            seguridad que implementaremos en el proyecto. También tendré una
+            reunión con el equipo de diseño para revisar los mockups finales.
+          </p>
+        </div>
+
+        <div class="advancement-section">
+          <h4>¿Que bloqueos tienes?</h4>
+          <p>
+            Necesito acceso al servidor de desarrollo para probar la integración
+            con el sistema de autenticación. He solicitado los permisos pero aún
+            estoy esperando la aprobación por parte del equipo de DevOps.
+          </p>
+        </div>
+
+        <div class="actions-container">
+          <button class="action-btn like-btn">
+            <i class="fas fa-thumbs-up"></i>
+            <span>3 Likes</span>
+          </button>
+          <button class="action-btn comment-btn">
+            <i class="fas fa-comment"></i>
+            <span>Comentar</span>
+          </button>
+          <button class="action-btn share-btn">
+            <i class="fas fa-share"></i>
+            <span>Compartir</span>
+          </button>
+        </div>
+
+        <div class="comments-section">
+          <h4>Comentarios (2)</h4>
+
+          <div class="comment-item">
+            <img src="images/woman2.png" alt="User" class="user-img" />
+            <div class="comment-content">
+              <div class="comment-author">Andrea Coronado</div>
+              <div class="comment-text">
+                Yo también necesito acceso al servidor. ¿Podemos hacer una
+                solicitud conjunta?
+              </div>
+              <div class="comment-date">Hoy, 10:15 AM</div>
+            </div>
+          </div>
+
+          <div class="comment-item">
+            <img src="images/man1.png" alt="User" class="user-img" />
+            <div class="comment-content">
+              <div class="comment-author">Juan Garzon</div>
+              <div class="comment-text">
+                Ya hablé con DevOps, van a dar los accesos esta tarde. Te
+                mantendré informado.
+              </div>
+              <div class="comment-date">Hoy, 10:30 AM</div>
+            </div>
+          </div>
+
+          <div class="add-comment">
+            <input
+              type="text"
+              placeholder="Escribe un comentario..."
+              class="comment-input"
+            />
+            <button class="send-comment-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item active" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Add Member Instructions Screen -->
+    <div id="add-member-screen" class="screen">
+      <header>
+        <div class="back-button">
+          <i class="fas fa-arrow-left"></i>
+          <span>Volver</span>
+        </div>
+        <h1>Daily Alarm</h1>
+        <div class="user-profile">
+          <img src="images/profile.jpg" alt="Profile" class="profile-img" />
+          <span>Nicolas Calero</span>
+        </div>
+      </header>
+
+      <div class="add-member-container">
+        <div class="team-info">
+          <img src="images/cm3.png" alt="Team" class="team-img" />
+          <h2>Equipo UX</h2>
+          <p class="team-code">Código: JDFA-3843-JDFS</p>
+        </div>
+
+        <div class="instructions-container">
+          <h3>Invitar miembros a tu equipo</h3>
+
+          <div class="instruction-methods">
+            <div class="method-tabs">
+              <div class="method-tab active" data-method="app">Vía App</div>
+              <div class="method-tab" data-method="link">Vía Link</div>
+              <div class="method-tab" data-method="email">Vía Email</div>
+            </div>
+
+            <div class="method-content active" id="app-method">
+              <div class="step-instructions">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-text">
+                    Pide a tu compañero que descargue la App Daily Alarm
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-text">
+                    Desde la pantalla principal, deben seleccionar "Agregar
+                    Equipo"
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-text">
+                    Deben ingresar el código: <strong>JDFA-3843-JDFS</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="qr-container">
+                <div class="qr-placeholder">
+                  <i class="fas fa-qrcode"></i>
+                </div>
+                <p>O escanear este código QR</p>
+              </div>
+            </div>
+
+            <div class="method-content" id="link-method">
+              <p class="method-description">
+                Comparte este enlace con los miembros que deseas invitar a tu
+                equipo:
+              </p>
+              <div class="link-container">
+                <input
+                  type="text"
+                  value="https://dailyalarm.app/join/JDFA-3843-JDFS"
+                  readonly
+                  class="link-input"
+                />
+                <button class="copy-link-btn">Copiar</button>
+              </div>
+              <div class="share-options">
+                <button class="share-option">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>WhatsApp</span>
+                </button>
+                <button class="share-option">
+                  <i class="fab fa-telegram"></i>
+                  <span>Telegram</span>
+                </button>
+                <button class="share-option">
+                  <i class="fas fa-share-alt"></i>
+                  <span>Más</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="method-content" id="email-method">
+              <p class="method-description">
+                Invita miembros por correo electrónico:
+              </p>
+              <div class="email-form">
+                <div class="input-group">
+                  <label>Correos electrónicos:</label>
+                  <textarea
+                    placeholder="Ingresa correos separados por comas"
+                    class="email-input"
+                  ></textarea>
+                </div>
+                <div class="input-group">
+                  <label>Mensaje (opcional):</label>
+                  <textarea class="message-input">
+Hola, te invito a unirte a nuestro equipo en Daily Alarm para nuestras reuniones diarias.</textarea
+                  >
+                </div>
+                <button class="send-invites-btn">Enviar Invitaciones</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="current-members">
+            <h4>Miembros actuales (5)</h4>
+            <div class="members-list">
+              <div class="member-item">
+                <img src="images/profile.jpg" alt="User" class="user-img" />
+                <span>Nicolas Calero</span>
+                <span class="admin-badge">Admin</span>
+              </div>
+              <div class="member-item">
+                <img src="images/man1.png" alt="User" class="user-img" />
+                <span>Esteban Ruiz</span>
+              </div>
+              <div class="member-item">
+                <img src="images/woman2.png" alt="User" class="user-img" />
+                <span>Andrea Coronado</span>
+              </div>
+              <div class="member-item">
+                <img src="images/women1.png" alt="User" class="user-img" />
+                <span>Margarita Rodriguez</span>
+              </div>
+              <div class="member-item">
+                <img src="images/man2.png" alt="User" class="user-img" />
+                <span>Juan Garzon</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item" data-target="dashboard-screen">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </div>
+        <div class="nav-item active" data-target="teams-screen">
+          <i class="fas fa-users"></i>
+          <span>Teams</span>
+        </div>
+        <div class="nav-item" data-target="profile-screen">
+          <i class="fas fa-user"></i>
+          <span>Profile</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div id="logout-modal" class="modal">
+      <div class="modal-content">
+        <h2>Cerrar Sesión</h2>
+        <div class="modal-options">
+          <button id="confirm-logout">Cerrar Sesión</button>
+          <button id="go-to-profile">Mi Perfil</button>
+          <button id="go-to-teams">Mis Equipos</button>
+          <button id="close-modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
